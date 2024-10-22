@@ -1,7 +1,7 @@
 bool compare(struct ListNode * , struct ListNode * );
 void insert(struct ListNode**,int );
 struct ListNode* createnode(int );
-bool isPalindrome(struct ListNode* head){
+bool isPalindrome(struct ListNode* head){//hhkfgkfjgkj
     struct ListNode * head1=NULL;
     struct ListNode * temp = head;
     while(temp!=NULL)
