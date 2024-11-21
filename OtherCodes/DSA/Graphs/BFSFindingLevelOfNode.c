@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void bfs(int** arr, int source, int vertices, int ctr){
+void bfs(int** arr, int source, int vertices, int tar){
     int * visited = (int *)calloc(vertices,sizeof(int));
     visited[source]=1;
     int q[vertices];
@@ -11,7 +11,7 @@ void bfs(int** arr, int source, int vertices, int ctr){
     while(front<rear){
         int node = q[front++];
         level++;
-        if(node == ctr){
+        if(node == tar){
             printf("%d ", level);
             return;
         }
@@ -39,5 +39,7 @@ int main(){
     }
     int source;
     scanf("%d",&source);
-    bfs(arr,0,v,source);
+    int tar;
+    scanf("%d",&tar);
+    bfs(arr,source,v,tar);
 }

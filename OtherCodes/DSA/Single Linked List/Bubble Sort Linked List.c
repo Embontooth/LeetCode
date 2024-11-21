@@ -1,6 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct ListNode{
+    int val;
+    struct node * next;
+};
 struct ListNode* insertionSortList(struct ListNode* head) {
     struct ListNode * temp1 = head;
-    int n=1;
     if(temp1==NULL)
     {
         return head;
@@ -10,7 +15,7 @@ struct ListNode* insertionSortList(struct ListNode* head) {
         struct ListNode * temp = head;
         while(temp->next!=NULL)
         {
-            if(temp->val>temp->next->val)
+            if((temp->val)>(temp->next->val))
             {
                 int t = temp->val;
                 temp->val=temp->next->val;

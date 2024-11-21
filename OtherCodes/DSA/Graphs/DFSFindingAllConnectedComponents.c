@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 void dfs(int ** graph, int source, int * visited, int vertices){
     visited[source]=1;
     printf("%d ",source);

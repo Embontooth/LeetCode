@@ -76,6 +76,6 @@ int main(){
     }
     int del;
     scanf("%d",&del);
-    deletion(root, del);
+    root=deletion(root, del);
     inorder(root);
 }
